@@ -9,10 +9,16 @@ NVIDIA <br>
 ### License/Terms of Use: <br>
 CC-BY-4.0 AND Apache-2.0 <br>
 ## Use Case: <br>
-Developers and engineers generating labeled synthetic training data for physical-AI perception models by running video data augmentation and auto-labeling workflows on NVIDIA OSMO. <br>
+Developers and engineers running video data augmentation and auto-labeling pipelines on NVIDIA OSMO to generate labeled synthetic training data for physical-AI perception models. <br>
 
 ### Deployment Geography for Use: <br>
 Global <br>
+
+## Requirements / Dependencies: <br>
+**Requires API Key or External Credential:** [Yes] <br>
+**Credential Type(s):** [API key] <br>
+
+Do not include secrets in prompts/logs/output; use least-privilege credentials; rotate keys as appropriate. <br>
 
 ## Known Risks and Mitigations: <br>
 Risk: Review before execution as proposals could introduce incorrect or misleading guidance into skills. <br>
@@ -20,15 +26,14 @@ Mitigation: Review and scan skill before deployment. <br>
 
 ## Reference(s): <br>
 - [NVIDIA OSMO](https://developer.nvidia.com/osmo) <br>
-- [Setup Guide](references/setup.md) <br>
-- [Troubleshooting](references/troubleshooting.md) <br>
-- [Container Images](references/container-images.md) <br>
-- [NIM Endpoint Reference](references/nim/README.md) <br>
 - [Augmentation and Auto-Labeling Flow](references/flows/augmentation_and_al.md) <br>
 - [Auto-Labeling Flow](references/flows/auto_labeling.md) <br>
 - [E2E Flow](references/flows/e2e.md) <br>
-- [E2E Super-Resolution Flow](references/flows/e2e_super_resolution.md) <br>
-- [Cookbook Tuning Guide](assets/cookbooks/TUNING_GUIDE.md) <br>
+- [E2E Super Resolution Flow](references/flows/e2e_super_resolution.md) <br>
+- [NIM Endpoint Reference](references/nim/README.md) <br>
+- [Setup Guide](references/setup.md) <br>
+- [Troubleshooting](references/troubleshooting.md) <br>
+- [Container Images](references/container-images.md) <br>
 
 
 ## Skill Output: <br>
@@ -44,7 +49,7 @@ Mitigation: Review and scan skill before deployment. <br>
 
 
 ## Evaluation Tasks: <br>
-Evaluated against 17 evaluation tasks (13 positive skill-activation, 4 negative) with 2 attempts per task and a 50% pass threshold. <br>
+Evaluated against 1 evaluation task in the astra-sandbox environment using NVSkills-Eval external profile. <br>
 
 ## Evaluation Metrics Used: <br>
 Reported benchmark dimensions: <br>
@@ -68,11 +73,11 @@ Underlying evaluation signals used in this run: <br>
 ## Evaluation Results: <br>
 | Dimension | Num | `claude-code` | `codex` |
 |---|---:|---:|---:|
-| Security | 8 | 100% (+6%) | 97% (+12%) |
-| Correctness | 8 | 82% (+2%) | 78% (-2%) |
-| Discoverability | 8 | 75% (+4%) | 66% (-2%) |
-| Effectiveness | 8 | 75% (+2%) | 71% (-7%) |
-| Efficiency | 8 | 70% (+3%) | 57% (-4%) |
+| Security | 1 | 100% (+0%) | 100% (+0%) |
+| Correctness | 1 | 100% (+75%) | 97% (+72%) |
+| Discoverability | 1 | 100% (+75%) | 97% (+72%) |
+| Effectiveness | 1 | 90% (+90%) | 100% (+86%) |
+| Efficiency | 1 | 94% (+69%) | 96% (+69%) |
 
 ## Skill Version(s): <br>
 1.0.0 (source: frontmatter) <br>
